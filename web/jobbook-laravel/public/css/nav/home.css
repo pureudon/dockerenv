@@ -1,0 +1,345 @@
+/*------------------------------
+=BASIC SETUP
+------------------------------*/
+
+/* Makeshift CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, section, aside, nav, article {
+	display: block;
+}
+
+body {
+	margin: 0 auto;
+	padding: 22px 0;
+	width: 99%;
+	font: 13px/22px Helvetica, Arial, sans-serif;
+	background: #F3F3F3;
+	overflow: scroll;
+}
+
+h1, h2 {
+	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 22px;
+	padding: 11px 0;
+}
+
+p {
+	padding-bottom: 22px;
+}
+
+
+/*------------------------------
+=Table
+------------------------------*/
+table.sample {
+	border-width: 0px;
+	border-spacing: ;
+	border-style: solid;
+	border-color: gray;
+	border-collapse: separate;
+	background-color: white;
+
+	font-size: 13px;
+	text-decoration: none;
+}
+table.sample th {
+	border-width: 0px;
+	padding: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: rgb(221, 221, 221);
+	-moz-border-radius: ;
+}
+table.sample td {
+	border-width: 0px;
+	padding: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: rgb(221, 221, 221);
+	-moz-border-radius: ;
+}
+.highlight {
+	background-color:  rgb(136, 136, 255);
+}
+
+#example a {
+text-decoration: none;
+}
+#example  a:link {
+COLOR: #000000;
+}
+#example a:visited {
+COLOR: #000000;
+}
+#example a:hover {
+COLOR: #000000;
+}
+#example a:active {
+COLOR: #000000;
+}
+
+/*------------------------------
+=NAVIGATION
+------------------------------*/
+
+nav {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background: url("images/nav_background.png");
+}
+
+	nav ul {
+		margin: 0 auto;
+		width: 80%;
+		list-style: none;
+	}
+
+		nav ul li {
+			float: left;
+		}
+		
+			nav ul li a {
+				display: block;
+				margin-right: 30px;
+				/* width: 95px; */
+				font-size: 14px;
+				line-height: 44px;
+				text-align: center;
+				text-decoration: none;
+				color: #aaa;
+			}
+			
+				nav ul li a:hover {
+/* 					color: #6698FF; */
+					color: #ffffff;
+				}
+			
+			nav ul li.selected a {
+/* 				color: #6698FF; */
+				color: #ffffff;
+			}
+			
+			nav ul li.subscribe a {
+				margin-left: 22px;
+				padding-left: 33px;
+				text-align: left;
+				background: url("images/rss.png") left center no-repeat;
+			}
+
+#nav2 {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background: url("images/nav2_background_lite2.png");
+}
+	#nav2 ul {
+		margin: 0 auto;
+		width: 80%;
+		list-style: none;
+
+	}
+
+		#nav2 ul li {
+			float: left;
+		}
+			#nav2 ul li a {
+				display: block;
+				margin-right: 30px;
+				/* width: 80px; */
+				font-size: 14px;
+				line-height: 44px;
+				text-align: center;
+				text-decoration: none;
+				color: #777777;
+			}
+			
+				#nav2 ul li a:hover {
+/* 					color: #1589FF; */
+					color: #000000;
+				}
+			
+			#nav2 ul li.selected a {
+/* 				color: #1589FF; */
+				color: #000000;
+                font-weight: 600
+			}
+			
+			#nav2 ul li.subscribe a {
+				margin-left: 22px;
+				padding-left: 33px;
+				text-align: left;
+				background: url("images/rss.png") left center no-repeat;
+			}
+
+/*------------------------------
+=NAV space
+------------------------------*/
+#navspace {
+	position: relative;
+	margin-top: 30px;
+	padding: 0px;
+}
+
+#nav2space {
+	position: relative;
+	margin-top: 30px;
+	padding: 0px;
+}
+
+/*------------------------------
+=CONTENT AREA AND SIDEBAR LAYOUT
+------------------------------*/
+
+#content {
+/* 	display: table; */
+/*     width: 100% */
+/* 	margin: 0; */
+	padding-top: 60px;
+}
+
+	#leftContent {
+		display: table-cell;
+/* 		width: 600; */
+		padding-right: 10px;
+	}
+
+	#rightContent {
+		display: table-cell;
+/* 		width: 480; */
+		vertical-align:top;
+	}
+
+#content h1{
+	font-size: 28px;
+	line-height: 48px;
+	padding: 10px 0;
+}
+
+/********************/
+/* Datables */
+
+/* Method 1  ( official ) */
+tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+
+thead input {
+        width: 100px;
+/*         padding: 3px; */
+        box-sizing: border-box;
+    }
+
+
+/* ( by nishant261989 ) */
+/* tfoot {
+    display: table-header-group;
+} */
+
+/* This button was generated using CSSButtonGenerator.com */
+/*Editor button*/
+.editor {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
+	text-indent:0px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	height:23px;
+	line-height:23px;
+	width:47px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #528ecc;
+}
+.editor:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+}.editor:active {
+	position:relative;
+	top:1px;
+}
+
+/* This button was generated using CSSButtonGenerator.com */
+/*Editor button*/
+.editor100 {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
+	text-indent:0px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	height:23px;
+	line-height:23px;
+	width:47px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #528ecc;
+}
+.editor100:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+}.editor100:active {
+	position:relative;
+	top:1px;
+}
+

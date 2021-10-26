@@ -1,0 +1,108 @@
+/*------------------------------
+=NAVIGATION
+------------------------------*/
+
+nav {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background: url("images/nav_background.png");
+}
+
+	nav ul {
+		margin: 0 auto;
+		width: 80%;
+		list-style: none;
+	}
+
+		nav ul li {
+			float: left;
+		}
+		
+			nav ul li a {
+				display: block;
+				margin-right: 30px;
+				/* width: 95px; */
+				font-size: 14px;
+				line-height: 44px;
+				text-align: center;
+				text-decoration: none;
+				color: #aaa;
+			}
+			
+				nav ul li a:hover {
+/* 					color: #6698FF; */
+					color: #ffffff;
+				}
+			
+			nav ul li.selected a {
+/* 				color: #6698FF; */
+				color: #ffffff;
+			}
+			
+			nav ul li.subscribe a {
+				margin-left: 22px;
+				padding-left: 33px;
+				text-align: left;
+				background: url("images/rss.png") left center no-repeat;
+			}
+
+#nav2 {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background: url("images/nav2_background_lite2.png");
+}
+	#nav2 ul {
+		margin: 0 auto;
+		width: 80%;
+		list-style: none;
+
+	}
+
+		#nav2 ul li {
+			float: left;
+		}
+			#nav2 ul li a {
+				display: block;
+				margin-right: 30px;
+				/* width: 80px; */
+				font-size: 14px;
+				line-height: 44px;
+				text-align: center;
+				text-decoration: none;
+				color: #777777;
+			}
+			
+				#nav2 ul li a:hover {
+/* 					color: #1589FF; */
+					color: #000000;
+				}
+			
+			#nav2 ul li.selected a {
+/* 				color: #1589FF; */
+				color: #000000;
+                font-weight: 600
+			}
+			
+			#nav2 ul li.subscribe a {
+				margin-left: 22px;
+				padding-left: 33px;
+				text-align: left;
+				background: url("images/rss.png") left center no-repeat;
+			}
+
+/*------------------------------
+=NAV space
+------------------------------*/
+#navspace {
+	position: relative;
+	margin-top: 30px;
+	padding: 0px;
+}
+
+#nav2space {
+	position: relative;
+	margin-top: 30px;
+	padding: 0px;
+}

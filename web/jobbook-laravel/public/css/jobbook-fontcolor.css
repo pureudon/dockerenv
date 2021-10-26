@@ -1,0 +1,52 @@
+.RedColor {
+    color:Red;
+}
+.LimeGreenColor {
+    color:LimeGreen;
+}
+.LightGreenColor {
+    color:LightGreen;
+}
+.SpringGreenColor {
+    color:SpringGreen;
+}
+.DeepSkyBlueColor {
+    color:DeepSkyBlue;
+}
+.DodgerBlueColor {
+    color:DodgerBlue;
+}
+.RoyalBlueColor {
+    color:RoyalBlue;
+}
+.SlateBlueColor {
+    color:SlateBlue;
+}
+.LightBlueColor {
+    color:LightBlue;
+}
+.AquaColor {
+    color:Aqua;
+}
+.LightSkyBlueColor {
+    color:LightSkyBlue;
+}
+
+.AmberColor {
+    color:#FFBF00;
+}
+.FuchsiaColor {
+    color:Fuchsia;
+}
+.DarkVioletColor {
+    color:DarkViolet;
+}
+.ThistleColor {
+    color:Thistle;
+}
+.SilverColor {
+    color:Silver;
+}
+.BoldFont {
+    font-weight:Bold;
+}
