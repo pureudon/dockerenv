@@ -1,0 +1,51 @@
+version: '3'
+services:
+
+  php74-httpd:
+    # IMAGE: php:7.4-apache (Dockerfile) 7.4.23
+    build: ./php74-httpd/
+    ports:
+      - 80:80
+    expose:
+        - 80
+    volumes:
+        - ./web/:/var/www/html
+        - ./php74-httpd/php74.ini:/usr/local/etc/php/php.ini:ro
+        # - ./php-httpd/sites:/etc/apache2/sites-available
+        - ./php74-httpd/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+        - ./php74-httpd/apache2.conf:/etc/apache2/apache2.conf
+        
+  mysql:
+    image: mysql:5.7.19
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql/db_data/var/lib/mysql/:/var/lib/mysql
+      - ./mysql/db_dump/:/db_dump
+    environment:
+      # these parameter only used for database creation
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: project
+      MYSQL_USER: project
+      MYSQL_PASSWORD: project
+
+  # maria_db:
+  #   container_name: mariadb
+  #   image: mariadb
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: docker
+  #   ports:
+  #     - 3306:3306
+  #   expose:
+  #     - "3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: mysql
+      UPLOAD_LIMIT: 10G
+      MAX_EXECUTION_TIME: 1800 
+      # PMA_USER: root
+      # PMA_PASSWORD: docker
