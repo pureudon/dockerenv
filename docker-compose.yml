@@ -1,20 +1,19 @@
-version: '3'
+version: "3"
 services:
-
   php74-httpd:
     # IMAGE: php:7.4-apache (Dockerfile) 7.4.23
     build: ./php74-httpd/
     ports:
       - 80:80
     expose:
-        - 80
+      - 80
     volumes:
-        - ./web/:/var/www/html
-        - ./php74-httpd/php74.ini:/usr/local/etc/php/php.ini:ro
-        # - ./php-httpd/sites:/etc/apache2/sites-available
-        - ./php74-httpd/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
-        - ./php74-httpd/apache2.conf:/etc/apache2/apache2.conf
-        
+      - ./web/:/var/www/html
+      - ./php74-httpd/php74.ini:/usr/local/etc/php/php.ini:ro
+      # - ./php-httpd/sites:/etc/apache2/sites-available
+      - ./php74-httpd/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./php74-httpd/apache2.conf:/etc/apache2/apache2.conf
+
   mysql:
     image: mysql:5.7.19
     ports:
@@ -42,10 +41,10 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
-      - 8080:80
+      - 8081:80
     environment:
       PMA_HOST: mysql
       UPLOAD_LIMIT: 10G
-      MAX_EXECUTION_TIME: 1800 
+      MAX_EXECUTION_TIME: 1800
       # PMA_USER: root
       # PMA_PASSWORD: docker
