@@ -34,8 +34,12 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
+        // $this->reportable(function (Throwable $e) {
+        //     if ($exception instanceof ModelNotFoundException && $request->wantsJson()) {
+        //         return response()->json([
+        //           'error' => 'Resource not found'
+        //         ], 404);
+        //       }
+        // });
     }
 }
