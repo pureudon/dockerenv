@@ -16,6 +16,7 @@ sleep 1
 # # init laravel
 docker-compose exec -T php74-httpd mkdir -p /var/www/html/jobbook-laravel/storage/logs
 docker-compose exec -T php74-httpd touch /var/www/html/jobbook-laravel/storage/logs/laravel.log
+docker-compose exec -T php74-httpd chmod 777 -R /var/www/html/jobbook-laravel/storage/logs/laravel.log
 
 docker-compose exec -T php74-httpd chmod 777 -R /var/www/html/jobbook-laravel/storage/logs/
 docker-compose exec -T php74-httpd chmod 777 -R /var/www/html/jobbook-laravel/bootstrap/cache
