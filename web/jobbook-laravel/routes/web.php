@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DatatypeController;
 
+// Resource
+use App\Http\Resources\UserResource;
+use App\Http\Resources\UserCollection;
+use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -98,3 +103,25 @@ Route::get('invoice/{invoice}/pdf4',[\App\Http\Controllers\InvoiceController::cl
 
 // invoice.show place to the last row, conflict with others GET route
 Route::get('invoice/{invoice}',[\App\Http\Controllers\InvoiceController::class, 'show'])->name('invoice.show');
+
+
+Route::get('/user/{id}', function ($id) {
+    return new UserResource(User::findOrFail($id));
+});
+Route::get('/users', function () {
+    // return UserResource::collection(User::all());
+    // return new UserCollection(User::all());
+    // return UserResource::collection(User::all()->keyBy->id);
+    return new UserCollection(User::paginate());
+
+    // return (new UserCollection(User::all()->load('roles')))
+    //             ->additional(['meta' => [
+    //                 'key' => 'value',
+    //             ]]);
+});
+
+// Route::get('/user', function () {
+//     return (new UserResource(User::find(1)))
+//                 ->response()
+//                 ->header('X-Value', 'True');
+// });

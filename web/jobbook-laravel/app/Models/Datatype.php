@@ -14,6 +14,10 @@ class Datatype extends Model
     public $timestamps = false;
 
     protected $fillable = [
-
+        'varchartype',
+        'inttype',
+        'yeartype',
+        'datetype',
+        'datetimetype',
     ];
 }
