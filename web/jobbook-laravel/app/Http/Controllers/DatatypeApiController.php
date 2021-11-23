@@ -96,4 +96,15 @@ class DatatypeApiController extends Controller
 
         return response()->json(null, 204);
     }
+
+    public function list()
+    {
+        return new DatatypeCollection(Datatype::all());
+    }
+
+    public function count()
+    {
+        return response()->json(['total' => Datatype::count()], 200);
+        // return Datatype::count();
+    }
 }

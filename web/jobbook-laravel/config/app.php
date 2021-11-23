@@ -178,6 +178,8 @@ return [
         // TCPDF
         Elibyy\TCPDF\ServiceProvider::class,
 
+        // JWT
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 
     /*
